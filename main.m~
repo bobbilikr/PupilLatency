@@ -4,19 +4,13 @@ close all;
 
 vid=videoinput('winvideo', 1,'YUY2_320x240');          % Video Parameters
 set(vid,'ReturnedColorSpace','grayscale');      % acquire in greyscale
-triggerconfig(vid, 'manual');
-start(vid);
 
-%Ivi=aviread('video001.avi');
 cnt=1;
 flag=0;
 figure;
-i=1;
-closeFlag=1;
-while(closeFlag)
+for i=1:size(Ivi,2)
     subplot(2,1,1);
-    %I=Ivi(i).cdata;
-    I=getsnapshot(vid);
+    I=Ivi(i).cdata;
     
     rawimg=rgb2gray(I(100:end-100,100:end-100,:));
     
@@ -58,7 +52,6 @@ while(closeFlag)
     end;
     hold off;
     title(i);
-    i=i+1;
     subplot(2,1,2);
     plot(radi);
     pause(1/30);
