@@ -18,7 +18,7 @@ while(closeFlag)
     %I=Ivi(i).cdata;
     I=getsnapshot(vid);
     
-    rawimg=rgb2gray(I(100:end-100,100:end-100,:));
+    rawimg=rgb2gray(I(100:end-100,100:end-100));
     
     %tic;
     [accum, circen, cirrad] = pupildetection(rawimg, [25 40],5,25);
