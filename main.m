@@ -13,6 +13,7 @@ flag=0;
 figure;
 i=1;
 closeFlag=1;
+radi=[0,0,0];
 while(closeFlag)
     subplot(2,1,1);
     %I=Ivi(i).cdata;
