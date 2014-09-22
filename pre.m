@@ -1,6 +1,8 @@
 
 vid=videoinput('winvideo', 1,'YUY2_320x240');          % Video Parameters
 set(vid,'ReturnedColorSpace','grayscale');      % acquire in greyscale
+triggerconfig(vid, 'manual');
+start(vid);
 figure;
 hold on;
 while(1)
