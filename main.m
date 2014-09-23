@@ -2,7 +2,7 @@ clc;
 clear all;
 close all;
 
-vid=videoinput('winvideo', 1,'YUY2_320x240');          % Video Parameters
+vid=videoinput('winvideo', 1,'YUY2_800x600');          % Video Parameters
 set(vid,'ReturnedColorSpace','grayscale');      % acquire in greyscale
 triggerconfig(vid, 'manual');
 start(vid);
